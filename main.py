@@ -18,6 +18,7 @@ class Demotesting(unittest.TestCase):
         self.driver.get(navigate_url)
         self.driver.implicitly_wait(30)
 
+
     # Testing for all fields in the form
     def test_login(self):
         # Enter name
@@ -28,6 +29,7 @@ class Demotesting(unittest.TestCase):
         self.driver.find_element(By.XPATH, "/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[4]/input[1]").send_keys("9876543210")
         # Click oay now
         self.driver.find_element(By.XPATH, "/html/body/div/div/div/div/div[2]/div/div[2]/div[5]/button").click()
+        print("Success Test with all details")
 
     def test_without_mob(self):
         # Enter name
@@ -41,6 +43,7 @@ class Demotesting(unittest.TestCase):
         # Clicks pay now
         self.driver.implicitly_wait(10)
         self.driver.find_element(By.XPATH,"/html/body/div/div/div/div/div[2]/div/div[2]/div[5]/button").click()
+        print("Success Test without mob number")
 
 
 if __name__=='__main__':
